@@ -1,0 +1,308 @@
+body {
+    background-image: url(img/burger.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    display: flex;
+    text-transform: uppercase;
+}
+
+.general {
+    text-align: center;
+    margin: 0 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+
+}
+
+.general2 {
+  text-align: center;
+  margin: 2% -100%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.head {
+    display: flex;
+    height: 100px;
+    width: auto;
+    border-radius: 35px;
+    box-shadow: 8px 8px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff3300, #ff9900, #ff3300);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: flames 2s ease-in-out infinite alternate;
+
+}
+
+.icon{
+  margin:0 15px;
+}
+
+@keyframes flames {
+    0% {
+      text-shadow: 0 0 5px #ff9900, 0 0 10px #ffcc66, 0 0 15px #ff9900; 
+    }
+    100% {
+      text-shadow: 0 0 5px #ff9900, 0 0 10px #ffcc66, 0 0 15px #ff9900, 0 0 20px #ffcc66, 0 0 25px #ff9900, 0 0 30px #ffcc66; 
+  }
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+    font-style: oblique;
+
+}
+
+
+.user {
+    border-radius: 30px;
+    box-shadow: 8px 8px 10px;
+    margin: 15px auto;
+    padding: 1px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    background: linear-gradient(grey, white, orange);
+    animation: fuego 2s infinite alternate;
+  }
+
+  .user2{
+    border-radius: 30px;
+    box-shadow: 8px 8px 10px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+    background: linear-gradient(grey, white, orange);
+    animation: fuego 2s infinite alternate;
+  }
+
+  @media(max-width: 1500px){
+    .user2{
+      width: 20%;
+    }
+  }
+  
+
+  .letras{
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, yellow, orange, rgb(184, 75, 75));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: degradado 2s ease-in-out infinite alternate;
+  }
+  
+  
+  @keyframes degradado {
+    0% {
+      text-shadow: 0 0 5px yellow, 0 0 10px orange, 0 0 15px rgb(184, 75, 75);
+    }
+    100% {
+      text-shadow: 0 0 5px rgb(184, 75, 75), 0 0 10px orange, 0 0 15px yellow;
+    }
+  }
+
+
+.pedido {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    background-color: rgb(235, 195, 16);
+    border-radius: 30px;
+    box-shadow: 8px 8px 10px;
+    margin: 15px 2px 15px 5px;
+    padding: 1px 0;
+    background: linear-gradient(grey, white, orange);
+    animation: fuego 2s infinite alternate;
+  }
+  
+  @keyframes fuego {
+    0% {
+      background: linear-gradient(rgb(160, 79, 79), white, orange);
+    }
+    100% {
+      background: linear-gradient(orange, white, rgb(160, 79, 79));
+    }
+  }
+
+  .factura{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    justify-content: center;
+    background-color: rgb(235, 195, 16);
+    width: max-content;
+    padding: 0 15px;
+    border-radius: 30px;
+    box-shadow: 8px 8px 10px;
+    margin: 15px auto;
+    background: linear-gradient(grey, white, orange);
+    animation: fuego 2s infinite alternate;
+  }
+.primero {
+
+    display: flex;
+    flex-direction: row;
+    margin: 5px 2.5%;
+
+
+}
+
+.segundo {
+
+    display: flex;
+    flex-direction: row;
+    margin: 5px 2.5%;
+
+}
+
+.ajuste {
+    flex: 1 1;
+    margin: 0 1.5%;
+}
+
+.confirmar {
+    margin: -2px auto 15px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 5px;
+    background: linear-gradient(90deg, rgba(255, 255, 1, 0.6), rgba(255, 166, 0, 0.6), rgba(218, 14, 14, 0.6));
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 2px 2px ;
+}
+button{
+   cursor: pointer;
+  margin: 5px auto 17px auto;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, rgba(255, 255, 1, 0.6), rgba(255, 166, 0, 0.6), rgba(218, 14, 14, 0.6));
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 3px 3px ;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    text-shadow: 2.5px 2.5px rgba(153, 105, 17, 0.3);
+    animation: empty 3s infinite alternate;
+
+}
+
+button:hover{
+  animation: empty 0.4s infinite alternate;
+}
+@keyframes empty{
+  0%{
+    background: linear-gradient(90deg, yellow, orange, rgb(184, 75, 75))
+  }
+  100%{
+    background: linear-gradient(90deg, rgb(184, 75, 75), orange, yellow )
+  }
+}
+
+.volver{
+  cursor: pointer;
+  padding: 7px 15px;
+    background: linear-gradient(90deg, rgba(255, 255, 1, 0.6), rgba(255, 166, 0, 0.6), rgba(218, 14, 14, 0.6));
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 3px 3px ;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    text-shadow: 2.5px 2.5px rgba(153, 105, 17, 0.3);
+    animation: empty 3s infinite alternate;
+    text-decoration: none;
+
+}
+
+.volver:hover{
+  animation: empty 0.4s infinite alternate;
+}
+input{
+  background-color: transparent;
+  border-radius: 25px;
+  border: 3px solid black;
+  margin-left: -1px;
+  padding: 5px 10px;
+  box-shadow: 2px 2px;
+}
+
+input[type=number]{
+  padding: 2px 0;
+  width: 20%;
+  margin-left: 5px;
+  text-align: center;
+}
+
+input[type=text]{
+  margin: 5px 1%;
+}
+
+input[type=checkbox]{
+  cursor: pointer;
+  appearance: none;
+  background: transparent;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border-radius: 50px;
+  padding: 5px 7px;
+  box-shadow: 1px 1px;
+  
+}
+
+
+input[type=checkbox]:checked{
+  background-color: black;
+  border: 2.8px solid black;
+}
+
+
+h3{
+  font-weight: bold;
+  font-style:oblique;
+  
+  color: black;
+  text-shadow: 2.5px 2.5px rgba(153, 105, 17, 0.3);
+}
+
+.agradecimiento{
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  background-color: rgb(235, 195, 16);
+  border-radius: 40px;
+  box-shadow: 8px 8px 10px;
+  margin: 15px auto;
+  background: linear-gradient(grey, white, orange);
+  animation: fuego 2s infinite alternate;
+  width: 90%;
+}
+.organized{
+  display: flex;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+
