@@ -141,7 +141,7 @@
                                 die();
                             } else {
 
-                                if (!isset($_POST['sencilla']) && !isset($_POST['sencilla']) && !isset($_POST['sencilla']) && !isset($_POST['sencilla']) && !isset($_POST['sencilla']) && !isset($_POST['sencilla'])) {
+                               if (!isset($_POST['sencilla']) && !isset($_POST['dobleq']) && !isset($_POST['doblec']) && !isset($_POST['especial']) && !isset($_POST['aguacate']) && !isset($_POST['combo'])) {
                                     echo '<div class="confirmar">Por favor llena los campos correctamente </div>';
                                     die();
                                 } else {
