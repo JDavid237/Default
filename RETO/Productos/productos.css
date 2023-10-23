@@ -1,0 +1,373 @@
+/* Variables */
+:root {
+    --verde1: #51BC4E;
+    --verde2: #7DCE72;
+    --azul: #8BDBD9;
+    --rojo: #D24B3B;
+}
+
+
+
+
+
+/* General */
+body {
+    background: black;
+    text-transform: uppercase;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sesion */
+.general {
+    margin: 4vh auto;
+    width: 90%;
+    color: white;
+    display: flex;
+}
+
+.f1{
+    margin: 0 10px;
+    border-radius: 5px;
+    border:5px solid white;
+}
+
+.f2{
+    margin: 0 10px;
+    border-radius: 5px;
+    border:5px solid white;
+}
+
+
+input{
+    color: white;
+}
+
+/* Inicio */
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    background-color: black;
+    padding: 0.3% 0;
+    text-align: center;
+    background: linear-gradient(90deg, var(--verde1), var(--verde2), var(--azul));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: neon 2.5s ease-in-out infinite alternate, montañaRusa 2s infinite;
+
+}
+
+.logo a {
+    color: transparent;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 20px;
+
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--verde1);
+    box-shadow: inset 0 0 10px var(--azul), 0 0 15px var(--azul);
+}
+
+.nav a {
+    font-size: 17px;
+    font-weight: 600;
+    font-style: oblique;
+
+}
+
+.nav a:hover {
+    animation: parpadeo 2s infinite, montañaRusa 2s 2;
+
+}
+
+.nav1 {
+    display: flex;
+    width: 70%;
+}
+
+.nav .nav1 li {
+    flex: 1 1 auto;
+    margin: 0 2%;
+    letter-spacing: 2px;
+
+}
+
+.row {
+    margin: 0 1% 18px 1%;
+
+
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.search {
+    margin: 0px;
+    padding: 0 6px;
+}
+
+.input-field.search input[type="search"] {
+    padding: 0 40px;
+    border-bottom: 1.5px solid white;
+}
+
+.input-field.search input[type="search"]:focus {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid white;
+    box-shadow: none;
+    color: white;
+    padding-top: 10px;
+
+}
+
+.search:hover {
+    animation: parpadeo 2s infinite;
+}
+
+
+.search input+label i {
+    color: white
+}
+
+.dropdown {
+    margin: 0 15px 0 8px;
+    padding: 0 10px;
+    display: flex;
+}
+
+.dropdown a,
+.dropdown a:hover {
+    box-shadow: none;
+}
+
+.dropdown ul {
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px var(--azul), 0 0 15px var(--azul);
+}
+
+.dropdown li,
+.dropdown li a,
+.dropdown li:hover {
+    text-align: center;
+    background-color: var(--verde2);
+    color: white;
+    
+}
+
+/* Body */
+
+section{
+  height: 80vh;
+  margin-bottom: 30vh;
+  flex: 1 0 auto;
+}
+.carousel {
+    display: flex;
+    height: 75vh;
+    padding-bottom: 10vh;
+}
+
+img {
+    height: 50vh;
+    width: 70vh;
+    margin-bottom: 40%;
+    margin-top: -15%;
+    box-shadow: inset 0 0 5px var(--verde1), inset 0 0 10px var(--azul, 0 0 5px var(--verde1), 0 0 10px var(--azul));
+  }
+
+.info{
+    color: white;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.info h4, .info h5, .info2 h5{
+    text-shadow: 0 0 10px var(--rojo),  0 0 15px var(--rojo),  0 0 20px var(--rojo);
+    font-weight: 500;
+}
+
+.info p{
+    text-transform: none;
+}
+
+.info button{
+    padding: 3px 0;
+    letter-spacing: 2px;
+    margin-top: 3.2%;
+    font-size: 20px;
+    background: #6fc466ec;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-family: cursive;
+    font-weight: 600;
+    width: 30%;
+    border-radius: 1px white;
+    box-shadow: 0 0 15px var(--azul), inset 0 0 5px var(--azul);
+    border: none;
+}
+
+.info button:hover{
+    animation: 2s parpadeo infinite;
+}
+
+.info2{
+    color: white;
+    text-transform: none;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.info2 p{
+    margin-top: 2%;
+}
+
+.footer{
+    width: 100%;
+    background-color: var(--verde1);
+    margin-top: 5%;
+    color: #fff;
+    padding: 30px 0 10px 0; 
+    box-shadow: inset 0 0 10px var(--azul), 0 0 15px var(--azul);
+}
+      .contain{
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 7%;
+      }
+      .footer ul {
+        list-style: none; 
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+      }
+      
+      .footer a {
+        color: #fff; 
+        text-decoration: none; 
+        font-weight: 500;
+      }
+      
+      .footer a:hover {
+        text-shadow: 0 0 5px var(--azul), 0 0 10px var(--azul);
+        animation: 1.5s parpadeo 3;
+      }
+      
+      
+      .footer .col h5 {
+        font-size: 1.2em; 
+        margin-bottom: 15px; 
+        font-weight: 500;
+      }
+      
+      .footer .col ul li {
+        margin-bottom: 10px; /
+      }
+      
+      
+      .footer .col ul li a i {
+        font-size: 1.5em; 
+      }
+      
+      
+      .copyright { 
+        font-size: 0.9em; 
+        opacity: 0.8; 
+        transition: opacity 0.3s; 
+        margin-bottom: -4%;
+      }
+      
+      .copyright:hover {
+        opacity: 1; 
+      }
+      
+
+      
+
+/* Animaciones */
+@keyframes montañaRusa {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px var(--verde1), 0 0 10px var(--verde2), 0 0 15px var(--azul);
+    }
+
+    100% {
+        text-shadow: 0 0 5px var(--azul), 0 0 10px var(--verde2), 0 0 15px var(--verde1);
+    }
+}
+
+@keyframes parpadeo {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.55;
+    }
+}
+
+/* Adaptabilidad */
+
+@media (min-height:780px){
+    img{
+        margin-top: -65%;
+        height: 42vh ;
+    }
+
+    
+    .info{
+        margin-top: -4%;
+    }
+
+    .info2{
+       
+        margin: -9% 5% 0 5%;
+
+    }
+
+    .footer{
+        
+        
+    }
+   
+}
