@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once 'Conexion.php';
 
 $usuario_nuevo = $_POST['nombre_usuario'];
@@ -16,15 +16,18 @@ $result = $sentencia->fetch();
 
 if ($result) {
     if ($result['nombre'] == $usuario_nuevo) {
-        echo 'Ya existe un usuario con el mismo nombre';
+        $_SESSION['error'] = 'Ya existe un usuario con el mismo nombre';
+        header('location:Sesion.php');
         die();
     }
     if ($result['telefono'] == $telefono) {
-        echo 'Ya existe un usuario con el mismo teléfono';
+        $_SESSION['error'] = 'Ya existe un usuario con el mismo teléfono';
+        header('location:Sesion.php');
         die();
     }
     if ($result['email'] == $email) {
-        echo 'Ya existe un usuario con el mismo email';
+        $_SESSION['error'] = 'Ya existe un usuario con el mismo email';
+        header('location:Sesion.php');
         die();
     }
 }
@@ -32,10 +35,13 @@ if ($result) {
 $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
 
 if (empty($usuario_nuevo) || empty($telefono) || empty($email)) {
-    echo 'Por favor no deje campos vacíos';
+    $_SESSION['error'] = 'Por favor no deje campos vacíos';
+    header('location:Sesion.php');
+
 } else {
     if (empty($contrasena) || empty($contrasena2)) {
-        echo 'Por favor ingrese una contraseña y verifíquela';
+        $_SESSION['error'] = 'Por favor ingrese una contraseña y verifíquela';
+        header('location:Sesion.php');
     } else {
         if (password_verify($contrasena2, $contrasena)){;
             try {
@@ -43,9 +49,12 @@ if (empty($usuario_nuevo) || empty($telefono) || empty($email)) {
                 $sentencia_agregar = $conexion->prepare($sql_agregar);
             
                 if ($sentencia_agregar->execute(array($usuario_nuevo, $contrasena, $telefono, $email))) {
-                    echo 'Agregado <br>';
+                    $_SESSION['error'] = 'Agregado';
+                    header('location:Sesion.php');
+                    
                 } else {
-                    echo 'Error al agregar el usuario';
+                    $_SESSION['error'] = 'Error al agregar el usuario';
+                    header('location:Sesion.php');
                 }
             
                 $sentencia_agregar = null;
@@ -53,11 +62,19 @@ if (empty($usuario_nuevo) || empty($telefono) || empty($email)) {
             } catch (PDOException $e) {
                 
                 if ($e->errorInfo[1] == 1062) {
-                    echo 'Ya existe un usuario con el mismo teléfono';
+                    $_SESSION['error'] = 'Ya existe un usuario con el mismo teléfono';
+                    header('location:Sesion.php');
                     }
                 }
             }else {
-            echo 'La contraseña no es válida.';
+                if ($contrasena!=$contrasena2){
+                    $_SESSION['error'] = 'La contraseña debe ser igual';
+                    header('location:Sesion.php');
+                }else{
+                $_SESSION['error'] = 'La contraseña no es válida.';
+                header('location:Sesion.php');
+                }
+                
         }
     }
 }

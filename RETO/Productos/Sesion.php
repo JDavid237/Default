@@ -94,8 +94,15 @@
         </div>
       
     </section>
-    <div class="comprobacion">
-            prueba sirveeee
+    <div class="comprobacion" id="error">
+    <?php
+        session_start();
+        if (isset($_SESSION['error'])) {
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+            echo '<script>document.getElementById("error").style.display = "block";</script>';
+        }
+        ?>
         </div>
 </div>
    

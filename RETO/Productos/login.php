@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -14,7 +15,8 @@ $sentencia->execute(array($usuario_login));
 $result = $sentencia->fetch();
 
 if (!$result) {
-    echo 'No existe usuario';
+    $_SESSION['error'] = 'No existe el usuario';
+    header('location:Sesion.php');
     die();
 }
 
@@ -26,6 +28,11 @@ if (password_verify($contraseña_login, $result['contrasena'])) {
     $_SESSION['user_id'] = $user_id;
     header('location:inicio.php');
 } else {
+    $_SESSION['error'] = 'Las contraseñas no coinciden';
     echo 'No son iguales las contraseñas';
+    header('location:Sesion.php');
     die();
 }
+?>
+
+
