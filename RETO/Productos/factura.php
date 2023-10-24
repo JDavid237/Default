@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>factura</title>
-    <link rel="stylesheet" href="productos.css">
+    <link rel="stylesheet" href="producto.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -37,20 +37,21 @@ if ($user) {
     $title = $_GET['title'];
     $price = $_GET['price'];
   
-    echo $username;
-    echo "Título: $title<br>";
-    echo $price;
-    echo $tel;
-    echo $mail;
+    echo "<h4>Compra realizada ".$username."</h4>";
+    echo "<h5>Título: </h5>". "<h6>".$title."</h6>";
+    echo "<h5>Telefono: </h5>". "<h6>".$tel."</h6>";
+    echo "<h5>Email: </h5>". "<h6>".$mail."</h6>";
+    echo "<h5>".$price."</h5>";
 } else {
     echo "Usuario no encontrado.";
 }
 ?>
-
-<button href="inicio.php">
+<a href="inicio.php">
+<button>
     volver
 <i class="material-icons right">subdirectory_arrow_left</i>
 </button>
+</a>
     </div>
 </div>
 </body>

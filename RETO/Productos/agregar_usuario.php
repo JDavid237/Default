@@ -49,7 +49,7 @@ if (empty($usuario_nuevo) || empty($telefono) || empty($email)) {
                 $sentencia_agregar = $conexion->prepare($sql_agregar);
             
                 if ($sentencia_agregar->execute(array($usuario_nuevo, $contrasena, $telefono, $email))) {
-                    $_SESSION['error'] = 'Agregado';
+                    $_SESSION['error'] = 'Usuario agregado';
                     header('location:Sesion.php');
                     
                 } else {

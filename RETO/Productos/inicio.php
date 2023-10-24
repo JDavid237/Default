@@ -18,7 +18,7 @@ if (!isset($_SESSION['admin'])) {
     <title>Inicio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="productos.css">
+    <link rel="stylesheet" href="producto.css">
     <script src="https://kit.fontawesome.com/027f6cc223.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,7 +30,7 @@ if (!isset($_SESSION['admin'])) {
         <div class="nav-wrapper nav">
 
             <ul class="right hide-on-med-and-down nav1">
-                <li><a href="sass.html"><i class="material-icons left">home</i>inicio</a></li>
+                <li><a href="inicio.php"><i class="material-icons left">home</i>inicio</a></li>
                 <li><a href="badges.html"><i class="material-icons left">view_module</i>categorias</a></li>
                 <li><a href="sass.html"><i class="material-icons left">local_offer</i>ofertas</a></li>
                 <li><a href="sass.html"><i class="material-icons left">today</i>noticias</a></li>
